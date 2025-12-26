@@ -1,90 +1,80 @@
-Mall Human Counting System using YOLOv8
+# 🧍‍♂️ Mall Human Counting System using YOLOv8
 
-This project is a real-time human counting system for malls developed using Python and YOLOv8.
-It detects, tracks, and counts people moving UP and DOWN across predefined virtual lines in video footage.
+This project is a **real-time human counting system** for malls developed using Python and YOLOv8.  
+It detects, tracks, and counts people moving **UP and DOWN** across predefined virtual lines in video footage.
 
 The system uses object detection, multi-object tracking, and line-crossing logic to accurately count entry and exit movements.
 
-FEATURES
+---
 
-Real-time person detection using YOLOv8
+## Features
 
-Multi-object tracking with SORT algorithm
+- Real-time person detection using YOLOv8
+- Multi-object tracking with SORT algorithm
+- Unique ID assigned to each detected person
+- Entry and exit counting using virtual lines
+- Region of Interest (ROI) masking to reduce false detections
+- Works with recorded video files
 
-Unique ID assigned to each detected person
+---
 
-Entry and exit counting using virtual lines
+## How It Works
 
-Region of Interest (ROI) masking to reduce false detections
+1. YOLOv8 detects persons in each video frame
+2. SORT tracker assigns a unique ID to every person
+3. Virtual lines are defined for UP and DOWN movement
+4. When a tracked person crosses a line, the count is updated
+5. ROI masking limits detection to the required area
 
-Works with recorded video files
+---
 
-HOW IT WORKS
+## Tech Stack
 
-YOLOv8 detects persons in each video frame
+- Python
+- YOLOv8 (Ultralytics)
+- OpenCV
+- SORT Tracking
+- NumPy
 
-SORT tracker assigns a unique ID to every person
+---
 
-Virtual lines are defined for UP and DOWN movement
+## Applications
 
-When a tracked person crosses a line, the count is updated
+- Smart Malls
+- Crowd Management
+- Surveillance Systems
+- Public Place Monitoring
 
-ROI masking limits detection to the required area
+---
 
-TECH STACK
-
-Python
-
-YOLOv8 (Ultralytics)
-
-OpenCV
-
-SORT Tracking
-
-NumPy
-
-APPLICATIONS
-
-Smart Malls
-
-Crowd Management
-
-Surveillance Systems
-
-Public Place Monitoring
-
-PROJECT STRUCTURE
-
+## Project Structure
 Mall-Human-Counting-YOLOv8
 │
-├── Images (video and mask files)
-├── Yolo-Weights (YOLOv8 model weights)
+├── Images/ # video and mask files
+├── Yolo-Weights/ # YOLOv8 model weights
 ├── sort.py
 ├── project.py
 ├── requirements.txt
 └── README.md
 
-HOW TO RUN
 
-Install required Python libraries
 
-Download YOLOv8 weights and place them in the Yolo-Weights folder
 
-Run the project using the command:
 
+---
+
+## How to Run
+
+1. Install required Python libraries
+2. Download YOLOv8 weights and place them in the `Yolo-Weights` folder
+3. Run the project using the command:
+
+```bash
 python project.py
 
-KEY LEARNINGS
 
-Real-time object detection pipeline
-
-Multi-object tracking using SORT
-
-Line-crossing based people counting
-
-Practical application of Computer Vision concepts
-
-AUTHOR
+## Author
 
 Akash Singh
-B.Tech Student 
+B.Tech Student | Computer Vision Enthusiast
+
